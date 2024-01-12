@@ -4,7 +4,8 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { ReportsModule } from './reports/reports.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-
+import { User } from './users/user.entity';
+import { Report } from './reports/report.entity';
 @Module({
   imports: [
     UsersModule,
@@ -14,7 +15,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       // typeORM is the module for DB connection
       type: 'sqlite',
       database: 'db.sqlite', // connecting to sqlite db
-      entities: [], // will store the list of entities being used
+      entities: [User, Report], // will store the list of entities being used
       synchronize: true,
     }),
   ],
