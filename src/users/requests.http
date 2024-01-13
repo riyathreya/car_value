@@ -6,3 +6,21 @@ content-type: application/json
     "email": "riyathreya@gmail.com",
     "password": "123"
 }
+
+### find a particular user by ID
+GET http://localhost:3000/auth/2
+
+###Find all users with a given email 
+GET http://localhost:3000/auth?email=riyathreya@gmail.com
+
+### Delete User
+DELETE http://localhost:3000/auth/1
+
+
+### Update a user
+PATCH http://localhost:3000/auth/2
+content-type: application/json
+
+{
+    "password": "aaabavc"
+}
