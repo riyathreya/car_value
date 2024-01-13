@@ -1,0 +1,8 @@
+###Craete a new user
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+    "email": "riyathreya@gmail.com",
+    "password": "123"
+}
