@@ -9,7 +9,7 @@ async function bootstrap() {
     new ValidationPipe({
       whitelist: true,
       // small security assistance here
-      // adding this makes sure any property not present in dto is stipped off when received at controller.
+      // adding this makes sure any property not present in dto is stripped off when received at controller.
     }),
   );
   await app.listen(3000);

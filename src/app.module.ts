@@ -16,7 +16,7 @@ import { Report } from './reports/report.entity';
       type: 'sqlite',
       database: 'db.sqlite', // connecting to sqlite db
       entities: [User, Report], // will store the list of entities being used
-      synchronize: true,
+      synchronize: true, // when new column is added in entity, it will synchronize automatically. Useful in dev env
     }),
   ],
   controllers: [AppController],
